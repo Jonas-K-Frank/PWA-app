@@ -1,23 +1,36 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
+      <v-card
+    color="grey lighten-5"
+    flat
+    height="100px"
+    tile
+  >
+      <v-toolbar dense>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Bourbons</v-toolbar-title>
+
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
       </v-btn>
-    </v-app-bar>
+
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-toolbar>
+      </v-card>
 
     <v-content>
       <HelloWorld/>
     </v-content>
+
   </v-app>
 </template>
 
@@ -30,7 +43,14 @@ export default {
     HelloWorld,
   },
   data: () => ({
-    //
+     extended: false,
+      extendedSlot: false,
+      prominent: false,
+      dense: true,
+      collapse: false,
+      flat: false,
+      bg: false,
+      extensionHeight: 48,
   }),
 };
 </script>
